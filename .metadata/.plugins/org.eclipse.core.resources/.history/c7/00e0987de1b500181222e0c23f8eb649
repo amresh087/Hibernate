@@ -1,0 +1,59 @@
+package com.stahya.test;
+
+
+
+import java.util.List;
+
+import org.hibernate.SQLQuery;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
+import com.sathya.util.HibernateUtill;
+
+public class Test {
+public static void main(String[] args) {
+	SessionFactory factory=HibernateUtill.getSessionaFactory();
+      Session session=factory.openSession();
+     
+//Hibernate Hql Query Example
+      
+      
+/*String hql="select c from Customer c";
+      Query query=session.createQuery(hql);
+      List list=query.list();
+      Iterator itr=list.iterator();
+        while(itr.hasNext())
+        {
+        	Customer c=(Customer)itr.next();
+        	System.out.println(c);
+        }
+        String hql1="select c.customerName from Customer c where c.customerId=:p1";
+        Query query2=session.createQuery(hql1);
+        query2.setParameter("p1", 200);
+           List list1=query2.list();
+          System.out.println(list1);
+          Crtrereia Example
+*/          /*Criteria crit=session.createCriteria(Customer.class);
+            List list=crit.list();
+            System.out.println(list);
+          */
+        /*Criteria crit=session.createCriteria(Customer.class);
+        Criterion c1=Restrictions.eq("customerId",200);
+        crit.add(c1);
+        */
+      /*List list=crit.list();
+        System.out.println(list);
+      */
+                //Native Sql
+         String sql="select * from customer_tab where customerId=?";
+                SQLQuery query=session.createSQLQuery(sql);
+                   query.setParameter(0, 200);
+                   List list=query.list();
+                   System.out.println(list);
+      
+     
+        
+	
+	
+}
+}

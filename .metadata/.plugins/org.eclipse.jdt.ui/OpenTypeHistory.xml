@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=Hibernate_Customer_App/E:\/software\/hibernate-release-4.3.11.Final\/lib\/required\/hibernate-core-4.3.11.Final.jar&lt;org.hibernate.id(IdentifierGenerator.class[IdentifierGenerator" modifiers="1537" timestamp="1438833288000"/>
+<typeInfo handle="=Hibernate_Hql_App/src&lt;com.sathya.dao{EmpDao.java[EmpDao" modifiers="513" timestamp="1523286477393"/>
+<typeInfo handle="=Hibernate_Table_Per_Class/src&lt;com.sathya.dao{TablePer.java[TablePer" modifiers="513" timestamp="1523985910433"/>
+<typeInfo handle="=Hibernate_OneToMany/src&lt;com.sathya.dao{CustomerDao.java[CustomerDao" modifiers="513" timestamp="1524664155855"/>
+<typeInfo handle="=Hibernate_ManyToMany_App/src&lt;com.sathya.dao{MTMDao.java[MTMDao" modifiers="513" timestamp="1525095970786"/>
+<typeInfo handle="=Hibernate_OneToOne_Fk/src&lt;com.sathya.dao{PassportDao.java[PassportDao" modifiers="513" timestamp="1525105286972"/>
+<typeInfo handle="=Hibernate_Image_Insert_Select_App/src&lt;com.sathya.dao{ImageDao.java[ImageDao" modifiers="513" timestamp="1525452730722"/>
+</typeInfoHistroy>

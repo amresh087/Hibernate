@@ -1,0 +1,40 @@
+package com.sathya.entity;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue(value="chq")
+
+public class Checque extends Payment
+{
+	private int chqNo;
+	private int chqType;
+	public int getChqNo() {
+		return chqNo;
+	}
+	@Override
+	public String toString() {
+		return "Checque [chqNo=" + chqNo + ", chqType=" + chqType + ", getChqNo()=" + getChqNo() + ", getChqType()="
+				+ getChqType() + "]";
+	}
+	public Checque()
+	{
+	}
+	
+	
+	public void setChqNo(int chqNo) {
+		this.chqNo = chqNo;
+	}
+	public int getChqType() {
+		return chqType;
+	}
+	public void setChqType(int chqType) {
+		this.chqType = chqType;
+	}
+		
+
+	}
+	
+
+

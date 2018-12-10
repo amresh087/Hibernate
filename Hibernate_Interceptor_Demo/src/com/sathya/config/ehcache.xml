@@ -1,0 +1,14 @@
+<ehcache>
+<defaultCache
+                   maxElementsInMemory="50"
+                   eternal="false"
+				   timeToIdleSeconds="180"
+                   timeToLiveSeconds="300"  />
+
+<cache name="Employee"
+	
+	eternal="false"
+	timeToIdleSeconds="3"
+	timeToLiveSeconds="600"/>
+ 
+</ehcache>

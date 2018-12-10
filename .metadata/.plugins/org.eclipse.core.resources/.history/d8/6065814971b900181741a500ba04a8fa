@@ -1,0 +1,48 @@
+package com.sathya.test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.sathya.entity.Courses;
+import com.sathya.entity.Student;
+import com.sathya.util.HibernateUtil;
+
+public class Test {
+	public static void main(String[] args) {
+		SessionFactory factory=HibernateUtil.getSessionFactory();
+		Session session=factory.openSession();
+		Transaction tx=session.beginTransaction();
+		Student s=new Student();
+		s.setStudentId(1898);
+		s.setStudentName("Durgesh");
+	
+		Courses c1=new Courses();
+		c1.setCourseId(1018);
+		c1.setCourseName("Java");
+		c1.setStudents(s);
+		
+		
+		Courses c2=new Courses();
+		c2.setCourseId(1018);
+		c2.setCourseName("Orcale");
+		c2.setStudents(s);
+		Set s1=new HashSet();
+		
+		s1.add(c1);
+		s1.add(c2);	
+		s.setCourse(s1);
+		
+		
+		session.save(s);
+		session.save(c1);
+		session.save(c2);
+		
+		tx.commit();
+		
+	}
+
+}

@@ -1,0 +1,20 @@
+package com.sathya.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="card")
+
+public class Checques extends Payments
+{
+	private int cardNo;
+	private String cardType;
+	
+
+		
+
+	}
+	
+
+

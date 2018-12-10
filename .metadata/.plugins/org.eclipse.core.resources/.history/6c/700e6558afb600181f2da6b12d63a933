@@ -1,0 +1,30 @@
+package com.sathya.test;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.sathya.entity.Cards;
+import com.sathya.entity.Checques;
+import com.sathya.util.HibernateUtil;
+
+public class Test {
+	public static void main(String[] args) {
+		SessionFactory factory=HibernateUtil.getSessionfactory();
+		Session session=factory.openSession();
+		
+		Transaction tx=session.beginTransaction();
+		   
+		   Cards cr=new Cards(1909,89899,new java.util.Date(),7666668,"Visa");
+		   Checques cq=new Checques(19098,8989,new java.util.Date(),766666,"Plain");
+		   //Transaction tx=session.beginTransaction();
+		   session.save(cr);
+		   //session.save(cq);
+		   tx.commit();
+		   
+		   
+		   
+		     
+	}
+
+}

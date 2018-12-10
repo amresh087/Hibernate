@@ -1,0 +1,8 @@
+<ehcache>
+<cache name="Employee"
+	
+	eternal="false"
+	timeToIdleSeconds="3"
+	timeToLiveSeconds="600"/>
+ 
+</ehcache>

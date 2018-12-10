@@ -1,0 +1,42 @@
+package com.sathya.entity;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Card_tab")
+public class Cards extends Payments
+{
+private int cardNo;
+private String cardType;
+public Cards(int txId, double amount, Date date, int cardNo, String cardType) {
+	super(txId, amount, date);
+	this.cardNo = cardNo;
+	this.cardType = cardType;
+}
+public Cards(int txId, double amount, Date date) {
+	super(txId, amount, date);
+	// TODO Auto-generated constructor stub
+}
+public Cards() {
+	super();
+	// TODO Auto-generated constructor stub
+}
+
+public int getCardNo() {
+	return cardNo;
+}
+public void setCardNo(int cardNo) {
+	this.cardNo = cardNo;
+}
+public String getCardType() {
+	return cardType;
+}
+public void setCardType(String cardType) {
+	this.cardType = cardType;
+}
+
+
+}

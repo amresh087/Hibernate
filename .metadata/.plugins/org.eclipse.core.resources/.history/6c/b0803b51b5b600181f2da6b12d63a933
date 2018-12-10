@@ -1,0 +1,56 @@
+package com.sathya.entity;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.PrimaryKeyJoinColumn;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="chq_tab")
+@PrimaryKeyJoinColumn(name="tx_ID")
+
+public class Checques extends Payments
+{
+	private int chqNo;
+	@Column(length=20)
+	
+	private String chqType;
+	public int getCardNo() {
+		return chqNo;
+	}
+	public Checques(int txId, double amount, Date date, int chqNo, String chqType) {
+		super(txId, amount, date);
+		this.chqNo = chqNo;
+		this.chqType =chqType;
+	}
+	public Checques() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	public int getChqNo() {
+		return chqNo;
+	}
+	public void setChqNo(int chqNo) {
+		this.chqNo = chqNo;
+	}
+	public String getChqType() {
+		return chqType;
+	}
+	public void setChqType(String chqType) {
+		this.chqType = chqType;
+	}
+	@Override
+	public String toString() {
+		return "Checques [chqNo=" + chqNo + ", chqType=" + chqType + ", getCardNo()=" + getCardNo() + ", getChqNo()="
+				+ getChqNo() + ", getChqType()=" + getChqType() + "]";
+	}
+	
+		
+
+	}
+	
+
+

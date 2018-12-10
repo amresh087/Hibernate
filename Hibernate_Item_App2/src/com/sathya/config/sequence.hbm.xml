@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.sathya.entity.LoanDemo" table="Loan_tab">
+<id name="loanId"   column="Loan_id">
+<generator class="sequence">
+<param name="sequence">test_sequence</param>
+</generator>
+
+</id>
+<property name="loanName" column="Loan_name" length="12"/>
+<property name="amount"  column="Amount"/>
+</class>
+</hibernate-mapping>

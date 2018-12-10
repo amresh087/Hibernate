@@ -1,0 +1,19 @@
+package com.sathya.entity;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="course_tabs")
+
+public class Courses 
+{
+private int courseId;
+private String courseName;
+@ManyToMany(cascade=CascadeType.ALL,mappedBy="course")
+
+private Student students;
+
+}

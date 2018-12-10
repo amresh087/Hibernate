@@ -1,0 +1,17 @@
+package com.sathya.entity;
+
+import java.util.Date;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue(value="card")
+
+public class Cards extends Payments
+{
+private int c;
+private String cardType;
+
+
+}

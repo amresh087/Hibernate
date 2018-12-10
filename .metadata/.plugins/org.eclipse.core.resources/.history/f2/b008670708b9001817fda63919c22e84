@@ -1,0 +1,49 @@
+package com.sathya.test;
+
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.sathya.entity.Customer;
+import com.sathya.entity.Loan;
+import com.sathya.util.HibernateUtil;
+
+public class Test {
+	
+	public static void main(String[] args) {
+		SessionFactory factory=HibernateUtil.getSessionFactory();
+		Session session=factory.openSession();
+		Transaction tx=session.beginTransaction();
+		
+		/*Loan loan1=new Loan();
+		loan1.setLoanId(190);
+		loan1.setAmount(8989);
+		
+		Loan loan2=new Loan();
+		loan2.setLoanId(191);
+		loan2.setAmount(89890);
+		Set ss=new HashSet();
+		ss.add(loan1);
+		ss.add(loan2);
+		Customer cust=new Customer();
+		 cust.setCustId(10101);
+		 cust.setCustName("SriNivas");
+		 cust.setLoans(ss);
+		 session.save(cust);
+		 tx.commit();
+		 */
+		
+		//Customer c=(Customer)session.get(Customer.class,190);
+		Loan l=(Loan)session.get(Loan.class,191);
+		Customer c=(Customer)session.get(Customer.class,190);
+		Set<Loan> s=c.getLoans();
+		s.remove(l);
+		
+		
+		
+		
+	}
+
+}

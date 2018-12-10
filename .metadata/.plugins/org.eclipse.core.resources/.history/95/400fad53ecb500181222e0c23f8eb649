@@ -1,0 +1,46 @@
+package com.sathya.entity;
+
+import java.util.Date;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue(value="card")
+
+public class Card extends Payment
+{
+private int cardNo;
+private int cardType;
+public int getCardNo() {
+	return cardNo;
+}
+public Card()
+{
+	
+}
+
+public void setCardNo(int cardNo) {
+	this.cardNo = cardNo;
+}
+public int getCardType() {
+	return cardType;
+}
+public void setCardType(int cardType) {
+	this.cardType = cardType;
+}
+@Override
+public String toString() {
+	return "Card [cardNo=" + cardNo + ", cardType=" + cardType + ", getCardNo()=" + getCardNo() + ", getCardType()="
+			+ getCardType() + "]";
+}
+public Card(int txId, double amount, Date txdate) {
+	super(txId, amount, txdate);
+	// TODO Auto-generated constructor stub
+}
+public Card(int cardNo, int cardType) {
+	this.cardNo = cardNo;
+	this.cardType = cardType;
+}
+
+}

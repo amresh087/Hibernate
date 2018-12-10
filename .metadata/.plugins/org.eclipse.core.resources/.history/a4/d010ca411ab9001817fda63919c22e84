@@ -1,0 +1,45 @@
+package com.sathya.test;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+
+import com.sathya.entity.Customer;
+import com.sathya.entity.Loan;
+import com.sathya.util.HiberbnateUtil;
+
+public class Test {
+	
+	public static void main(String[] args) 
+	{
+		SessionFactory factory=HiberbnateUtil.getSessionfactory();
+		Session session=factory.openSession();
+		Transaction tx=session.beginTransaction();
+		Customer c=new Customer();
+		c.setCustId(190);
+		c.setCustomerName("Dubey");
+	   Loan l1=new Loan();
+	
+
+		
+		l1.setLoanId(1909);
+		l1.setAmount(2000);
+		l1.setCustomer(c);
+		
+		Loan l2=new Loan();
+		l2.setLoanId(12);
+		l2.setAmount(29099);
+		l2.setAmount(89898);
+		l2.setCustomer(c);
+		Set s=new HashSet();
+		s.add(l1);
+		s.add(l2);
+		c.setLoan(s);
+		
+		
+	}
+
+}

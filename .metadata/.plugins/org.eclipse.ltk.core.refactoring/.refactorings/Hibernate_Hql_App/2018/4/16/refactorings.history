@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;co.sathya.util&apos; to &apos;Hibernate_Table_Per_Class/src&apos;&#x0D;&#x0A;- Original project: &apos;Hibernate_Hql_App&apos;&#x0D;&#x0A;- Destination element: &apos;Hibernate_Table_Per_Class/src&apos;&#x0D;&#x0A;- Original element: &apos;Hibernate_Hql_App/src/co.sathya.util&apos;" description="Copy package" destination="=Hibernate_Table_Per_Class/src" element1="/src&lt;co.sathya.util" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1523983169485" version="1.0"/>
+</session>

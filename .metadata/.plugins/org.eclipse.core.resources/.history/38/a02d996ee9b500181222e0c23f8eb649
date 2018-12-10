@@ -1,0 +1,15 @@
+package com.sathya.entity;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue(value="chq")
+
+public class Checque extends Payment
+{
+	private int cardNo;
+	private int cardType;
+	
+
+}

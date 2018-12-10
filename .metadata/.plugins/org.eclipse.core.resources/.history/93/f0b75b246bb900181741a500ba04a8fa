@@ -1,0 +1,5 @@
+package com.sathya.entity;
+
+public class Student {
+
+}

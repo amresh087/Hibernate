@@ -1,0 +1,27 @@
+package com.sathya.entity;
+
+import java.util.Set;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="cust_tab")
+
+public class Customer {
+	private int custId;
+	@Column(length=12)
+	
+	private String custName;
+	@OneToMany(cascade=CascadeType.ALL,fetch=FetchType.EAGER)
+	@JoinColumn(name="custId_fk")
+	private Set<Loan> loans;
+	
+	
+
+}
